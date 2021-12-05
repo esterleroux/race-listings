@@ -1,0 +1,56 @@
+@import "imports";
+
+h1, h2, h3, h4, h5 {
+	color: $f1-black;
+  font-family: $f1-font-family, sans-serif;
+  margin: 8px 0;
+}
+
+.p-datatable .p-datatable-thead > tr > th {
+  background-color: $f1-light-grey !important;
+  color: $f1-white !important;
+  font-family: $f1-font-family, sans-serif;
+}
+
+.p-dialog .p-dialog-header .p-dialog-title {
+  font-family: $f1-font-family, sans-serif;
+}
+
+body {
+  font-family: sans-serif;
+  color: $f1-dark-grey;
+  background: $f1-background-colour;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: $f1-red;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.content-container {
+  display: flex;
+  margin: 82px auto 32px;
+  padding: 0 16px;
+  max-width: 960px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.table-container {
+  margin: 0 10vw;
+}
+
+.custom-font {
+  font-family: $f1-font-family, sans-serif;
+  padding: 10px;
+}
+
+
+

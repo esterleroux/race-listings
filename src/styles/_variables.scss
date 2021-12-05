@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css?family=Inconsolata:400,700");
+@import 'node_modules/bootstrap/scss/variables';
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap');
+
+/* Selects the root element of the document:
+   <html> in the case of HTML */
+:root {
+  --f1-background-colour: #f3f3f3;
+
+  --f1-black: #000000;
+  --f1-dark-grey: #15151e;
+  --f1-light-grey: #38383f;
+  --f1-red: #e10600;
+  --f1-white: #fff;
+
+  --f1-font-family: 'Titillium Web', sans-serif;
+}
+
+$f1-black: var(--f1-black);
+$f1-dark-grey: var(--f1-dark-grey);
+$f1-light-grey: var(--f1-light-grey);
+$f1-red: var(--f1-red);
+$f1-white: var(--f1-white);
+
+$f1-background-colour: var(--f1-background-colour);
+$f1-font-family: var(--f1-font-family);

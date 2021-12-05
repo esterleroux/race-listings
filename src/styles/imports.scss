@@ -1,0 +1,7 @@
+// Bootstrap - so we can use the variables in our css
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import './../../node_modules/primeng/resources/primeng.min.css';
+
+// Import our local variables to use throughout the project
+@import '_variables';

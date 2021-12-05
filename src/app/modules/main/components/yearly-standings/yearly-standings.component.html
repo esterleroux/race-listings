@@ -1,0 +1,31 @@
+<!-- Expanded Row: Display the year's winners for each race -->
+<div class="table-container">
+  <p-table [value]="standings" [loading]="loading">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Round</th>
+            <th>Race</th>
+            <th>Winner</th>
+            <th>Team</th>
+            <th>Laps</th>
+            <th>Grid</th>
+            <th>Time</th>
+            <th>Points</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-standing>
+      <!-- Highlight row if it is the same winner as the year winner -->
+      <tr [ngClass]="{'winning-driver': standing.driver_code === driverCode}">
+          <td>{{standing.round}}</td>
+          <td>{{standing.name}}</td>
+          <td>{{standing.driver_full_name}}</td>
+          <td>{{standing.team}}</td>
+          <td>{{standing.laps}}</td>
+          <td>{{standing.grid}}</td>
+          <td>{{standing.time}}</td>
+          <td>{{standing.points}}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
+

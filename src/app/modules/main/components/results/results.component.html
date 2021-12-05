@@ -1,0 +1,36 @@
+<!-- Expandable table displays all yearly winners since 2005 -->
+<div class="table-container">
+  <p-table [value]="winners" dataKey="year" [loading]="loading"
+  [paginator]="true" [rows]="5" [rowsPerPageOptions]="[5,10,25,50]">
+    <ng-template pTemplate="header">
+        <tr>
+            <th style="width: 3rem"></th>
+            <th>Year</th>
+            <th>Winner</th>
+            <th>Team</th>
+            <th>Wins</th>
+            <th>Points</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-winner let-expanded="expanded">
+        <tr>
+            <td>
+                <button type="button" pButton pRipple [pRowToggler]="winner" class="p-button-text p-button-rounded p-button-plain" [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></button>
+            </td>
+            <td>{{winner.year}}</td>
+            <td>{{winner.driver_full_name}}</td>
+            <td>{{winner.constructor}}</td>
+            <td>{{winner.driver_wins}}</td>
+            <td>{{winner.driver_points}}</td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="rowexpansion" let-winner>
+      <tr>
+        <td colspan="6">
+          <app-yearly-standings [year]="winner.year" [driverCode]="winner.driver_id"></app-yearly-standings>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
+
